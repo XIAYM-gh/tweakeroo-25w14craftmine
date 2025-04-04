@@ -9,7 +9,9 @@ import net.minecraft.block.ShulkerBoxBlock;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.TooltipDisplayComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -42,7 +44,7 @@ public abstract class MixinItemStack
     }
 
     @Inject(method = "appendComponentTooltip", at = @At("HEAD"), cancellable = true)
-    private <T> void tweakeroo_removeVanillaTooltip(ComponentType<T> componentType, Item.TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type, CallbackInfo ci)
+    private <T> void tweakeroo_removeVanillaTooltip(ComponentType<T> componentType, Item.TooltipContext context, TooltipDisplayComponent displayComponent, @Nullable PlayerEntity playerEntity, Consumer<Text> consumer, TooltipType tooltipType, CallbackInfo ci)
     {
         if (this.getItem() instanceof BlockItem block &&
             block.getBlock() instanceof ShulkerBoxBlock &&

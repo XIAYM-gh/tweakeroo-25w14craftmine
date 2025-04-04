@@ -75,7 +75,6 @@
     "world.MixinChunkBuilder_BuiltChunk",
     "world.MixinClientWorld",
     "world.MixinClientWorld_Properties",
-    "world.MixinDimensionEffects_Nether",
     "world.MixinLightingProvider",
     "world.MixinServerChunkLoadingManager",
     "world.MixinUpdateStructureBlockC2SPacket",

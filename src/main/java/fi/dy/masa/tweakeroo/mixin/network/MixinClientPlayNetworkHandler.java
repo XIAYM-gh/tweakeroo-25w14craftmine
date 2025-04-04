@@ -3,6 +3,7 @@ package fi.dy.masa.tweakeroo.mixin.network;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.class_10951;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientCommonNetworkHandler;
 import net.minecraft.client.network.ClientConnectionState;
@@ -44,10 +45,10 @@ public abstract class MixinClientPlayNetworkHandler extends ClientCommonNetworkH
     /**
      * Copied From Tweak Fork by Andrew54757
      */
-    @Inject(method = "onOpenScreen", at = @At("HEAD"), cancellable = true)
-    private void tweakeroo_onOpenScreenListener(OpenScreenS2CPacket packet, CallbackInfo ci)
+    @Inject(method = "method_68894", at = @At("HEAD"), cancellable = true)
+    private void tweakeroo_onOpenScreenListener(class_10951 packet, CallbackInfo ci)
     {
-        if (!RenderTweaks.onOpenScreen(packet.getName(), packet.getScreenHandlerType(), packet.getSyncId()))
+        if (!RenderTweaks.onOpenScreen(packet.method_68903(), packet.method_68902(), packet.method_68901()))
         {
             ci.cancel();
         }
