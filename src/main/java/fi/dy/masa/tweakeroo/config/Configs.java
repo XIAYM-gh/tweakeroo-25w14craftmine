@@ -356,7 +356,7 @@ public class Configs implements IConfigHandler
         public static final ConfigBooleanHotkeyed       DISABLE_MOB_SPAWNER_MOB_RENDER  = new ConfigBooleanHotkeyed("disableMobSpawnerMobRendering",        false, "").apply(DISABLE_KEY);
         public static final ConfigBooleanHotkeyed       DISABLE_NAUSEA_EFFECT           = new ConfigBooleanHotkeyed("disableNauseaEffect",                  false, "").apply(DISABLE_KEY);
 //        public static final ConfigBooleanHotkeyed       DISABLE_NETHER_FOG              = new ConfigBooleanHotkeyed("disableNetherFog",                     false, "").apply(DISABLE_KEY);
-//        public static final ConfigBooleanHotkeyed       DISABLE_NETHER_PORTAL_SOUND     = new ConfigBooleanHotkeyed("disableNetherPortalSound",             false, "").apply(DISABLE_KEY);
+        public static final ConfigBooleanHotkeyed       DISABLE_NETHER_PORTAL_SOUND     = new ConfigBooleanHotkeyed("disableNetherPortalSound",             false, "").apply(DISABLE_KEY);
         public static final ConfigBooleanHotkeyed       DISABLE_OBSERVER                = new ConfigBooleanClient  ("disableObserver",                      false, "").apply(DISABLE_KEY);
         public static final ConfigBooleanHotkeyed       DISABLE_OFFHAND_RENDERING       = new ConfigBooleanHotkeyed("disableOffhandRendering",              false, "").apply(DISABLE_KEY);
         public static final ConfigBooleanHotkeyed       DISABLE_PARTICLES               = new ConfigBooleanHotkeyed("disableParticles",                     false, "").apply(DISABLE_KEY);
@@ -402,7 +402,7 @@ public class Configs implements IConfigHandler
                 DISABLE_ITEM_SWITCH_COOLDOWN,
                 DISABLE_MOB_SPAWNER_MOB_RENDER,
                 DISABLE_NAUSEA_EFFECT,
-                DISABLE_NETHER_FOG,
+//                DISABLE_NETHER_FOG,
                 DISABLE_NETHER_PORTAL_SOUND,
                 DISABLE_OBSERVER,
                 DISABLE_OFFHAND_RENDERING,
